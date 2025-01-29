@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Development</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #ff9966, #ff5e62); /* Example gradient background */
+            color: white; /* White text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Ensure full viewport height */
+            margin: 0; /* Remove default margins */
+        }
+
+      .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+      .btn-primary {
+            background-color: #fff; /* White button */
+            border-color: #fff;
+            color: #ff5e62; /* Text color matching the gradient */
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+
+      .btn-primary:hover {
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white on hover */
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Application Under Development</h1>
+        <p>This application is currently under development.  We are working hard to bring you exciting new features and improvements.</p>
+        <p>Please refer to the "About Us" page for more information about the project and the team.</p>
+        <a href="{{ url_for('about_us') }}" class="btn btn-primary">Learn More</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

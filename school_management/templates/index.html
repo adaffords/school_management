@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #e0f2f7, #ffffff);
+            /* Light blue gradient background */
+            color: #343a40;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #0307f8, #bbdefb);
+            /* Blue gradient navbar */
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: rgb(80, 6, 6) !important;
+        }
+
+        .jumbotron {
+            background-image: url('path/to/your/school_image.jpg');
+            /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 0;
+            margin-bottom: 0;
+            animation: fadeIn 1s ease-in-out;
+            /* Animate jumbotron */
+        }
+
+        .jumbotron h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .jumbotron p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            /* Blue button */
+            border-color: #007bff;
+            color: white;
+            font-weight: 500;
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+            animation: pulse 1.5s infinite;
+            /* Add a pulse animation */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .container {
+            padding: 40px;
+        }
+
+        .feature-box {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            animation: zoomIn 1s ease-in-out;
+            /* Animate feature boxes */
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-box {
+            display: flex;
+            flex-direction: column;
+            /* Arrange content vertically */
+            height: 100%;
+            /* Make the box take up full height of its parent (col-md-4) */
+        }
+
+        .feature-box p {
+            margin-top: auto;
+            /* Push the paragraph to the bottom */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: rgb(245, 242, 242);">
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('students') }}">Students</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('teachers') }}">Teachers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('about_us') }}">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('gallery') }}">Gallery</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron" style="background-color: #0307f8; color: white; padding: 100px 0; text-align: center;">
+        <h1
+            style="font-size: 4rem; font-weight: 700; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);">
+            Welcome to Hamdard Public School</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 40px;">Nurturing Young Minds, Shaping Bright Futures.</p>
+        <a href="#" class="btn btn-primary btn-lg"
+            style="background-color: white; border-color: white; color: #007bff; font-weight: 500; padding: 12px 24px; font-size: 1.1rem;">Learn
+            More</a>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" >
+                <div class="feature-box" style="background-color: rgb(190, 2, 2);">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h2>Excellent Academics</h2>
+                    <p>High-quality education with experienced teachers.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box" style="background-color: rgb(1, 212, 5);">
+                    <i class="fas fa-users"></i>
+                    <h2>Dedicated Faculty</h2>
+                    <p>Passionate teachers committed to student success.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box" style="background-color: rgb(190, 2, 2);">
+                    <i class="fas fa-book"></i>
+                    <h2>Modern Facilities</h2>
+                    <p>Well-equipped classrooms and resources.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/your_font_awesome_kit_id.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
